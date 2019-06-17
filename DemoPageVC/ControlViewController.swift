@@ -9,8 +9,6 @@
 import UIKit
 
 class ControlViewController: UIViewController {
-    
-    
     @IBOutlet weak var pageControl: UIPageControl!
     
     var PageViewController: UIPageViewController?
