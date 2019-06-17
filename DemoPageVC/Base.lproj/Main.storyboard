@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V25-TJ-5FK">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Page Content View Controller-->
+        <scene sceneID="qWv-OG-Chq">
+            <objects>
+                <viewController storyboardIdentifier="PageContentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1fD-Fc-jNI" customClass="PageContentViewController" customModule="DemoPageVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dk0-cq-FE4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lXE-b6-lRp">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01P-P5-GCn">
+                                <rect key="frame" x="0.0" y="44" width="414" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lXE-b6-lRp" firstAttribute="top" secondItem="01P-P5-GCn" secondAttribute="bottom" id="7ap-BB-NIF"/>
+                            <constraint firstItem="ial-ij-byv" firstAttribute="bottom" secondItem="lXE-b6-lRp" secondAttribute="bottom" id="HP3-Rg-9Lt"/>
+                            <constraint firstItem="01P-P5-GCn" firstAttribute="top" secondItem="ial-ij-byv" secondAttribute="top" id="MeH-aT-KEy"/>
+                            <constraint firstItem="ial-ij-byv" firstAttribute="trailing" secondItem="lXE-b6-lRp" secondAttribute="trailing" id="UmJ-hC-KEB"/>
+                            <constraint firstItem="lXE-b6-lRp" firstAttribute="top" secondItem="ial-ij-byv" secondAttribute="top" constant="100" id="Ztv-jN-ygy"/>
+                            <constraint firstItem="01P-P5-GCn" firstAttribute="leading" secondItem="ial-ij-byv" secondAttribute="leading" id="ZvD-vr-LfR"/>
+                            <constraint firstItem="lXE-b6-lRp" firstAttribute="leading" secondItem="ial-ij-byv" secondAttribute="leading" id="c5k-qn-e8D"/>
+                            <constraint firstItem="ial-ij-byv" firstAttribute="trailing" secondItem="01P-P5-GCn" secondAttribute="trailing" id="xFp-SO-T4c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ial-ij-byv"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="lXE-b6-lRp" id="p5w-wF-L2K"/>
+                        <outlet property="myLbl" destination="01P-P5-GCn" id="s21-yA-ZgF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="way-s0-1Au" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-959.4202898550725" y="-240.40178571428569"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="YXF-jS-Bh5">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="wbA-4A-0mc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AkB-Wq-j5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-203" y="-240"/>
+        </scene>
+        <!--Control View Controller-->
+        <scene sceneID="7py-We-J5g">
+            <objects>
+                <viewController storyboardIdentifier="Contro" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V25-TJ-5FK" customClass="ControlViewController" customModule="DemoPageVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2cE-AU-igW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="eV6-Ut-eEE">
+                                <rect key="frame" x="168" y="812" width="79" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="OdD-6D-wK8"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eV6-Ut-eEE" firstAttribute="leading" secondItem="VfT-sb-HcH" secondAttribute="leading" constant="208" id="Jfx-EX-Zeo"/>
+                            <constraint firstItem="VfT-sb-HcH" firstAttribute="bottom" secondItem="eV6-Ut-eEE" secondAttribute="bottom" constant="10" id="uH4-74-dwI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VfT-sb-HcH"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="eV6-Ut-eEE" id="8WX-Dj-ojf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y5T-pU-WbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="589.85507246376812" y="-240.40178571428569"/>
+        </scene>
+    </scenes>
+</document>
